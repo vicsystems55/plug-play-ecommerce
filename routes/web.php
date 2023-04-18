@@ -23,6 +23,10 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/success', function () {
+    return view('success');
+});
+
 Route::get('/get-started', [PageController::class, 'getStarted']);
 
 // Laravel 8 & 9

@@ -88,6 +88,15 @@
 
 
                                 <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                    <input type="text" name="firstname" placeholder="First name" class="shadow" required>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                    <input type="text" name="lastname" placeholder="Last name" class="shadow" required>
+                                </div>
+
+
+                                <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                     <input type="text" name="email" placeholder="Email" class="shadow" required>
                                 </div>
 
@@ -97,28 +106,31 @@
 
                                 <input type="hidden" name="amount" value="{{$price}}">
 
+                                <input type="hidden" name="subscription_name" value="{{$packageName}}">
+
+
 
 
                                 <hr class="container">
 
                                 <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                    <input type="text" name="storeName" placeholder="Store Name" class="shadow" required>
+                                    <input type="text" name="store_name" placeholder="Store Name" class="shadow" required>
                                 </div>
 
 
                                 <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                    <input type="text" name="storeDescription" placeholder="Store Description" class="shadow" required>
+                                    <input type="text" name="store_desc" placeholder="Store Description" class="shadow" required>
                                 </div>
 
 
                                 <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                    <input type="text" name="storeAddress" placeholder="Store Address" class="shadow" required>
+                                    <input type="text" name="store_address" placeholder="Store Address" class="shadow" required>
                                 </div>
 
 
 
                                 <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                    <input type="file" name="storeLogo" placeholder="Store Logo" required>
+                                    <input type="file" name="store_logo" placeholder="Store Logo" required>
                                 </div>
 
 

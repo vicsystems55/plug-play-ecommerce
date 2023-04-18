@@ -14,10 +14,12 @@ class CreatePlugPlaySubscriptionsTable extends Migration
     public function up()
     {
         Schema::create('plug_play_subscriptions', function (Blueprint $table) {
-            
+
             $table->id();
 
             $table->string('email');
+
+            $table->string('name');
 
             $table->string('phone');
 
@@ -28,6 +30,18 @@ class CreatePlugPlaySubscriptionsTable extends Migration
             $table->string('store_address');
 
             $table->string('store_logo');
+
+            $table->string('subscription_name');
+
+            $table->string('amount');
+
+
+            $table->string('tranx')->nullable();
+
+            $table->string('start_date');
+
+            $table->string('end_date');
+
 
             $table->timestamps();
         });

@@ -109,7 +109,7 @@ class PaymentController extends Controller
                         "apikey" => "7b58b1a575f80d21577d8969706ef2f6d5aae932"
                     ],
                     "message" => [
-                        "sender" => "Plug&Play",
+                        "sender" => "vicSystems",
                         "messagetext" => "Congratulations. Your store has been setup.",
                         "flash" => "0"
                     ],
@@ -129,7 +129,7 @@ class PaymentController extends Controller
         ];
         Http::withBody(json_encode($data), 'application/json')
 
-            ->post('https://api.ebulksms.com:8080/sendsms.json');
+            ->post('https://api.ebulksms.com/sendsms.json');
 
         $data = array(
             "amount" => $request->amount * 100,

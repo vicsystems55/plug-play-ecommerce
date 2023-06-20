@@ -61,7 +61,7 @@ class PageController extends Controller
     public function index() {
 
         SEOTools::setTitle('Plug & Play Ecommerce');
-        SEOTools::setDescription('Plug & Play Ecommerce is aimed at relieving you our clients from the hassle of taking your business sales process online.');
+        SEOTools::setDescription('Sell fast, sell smart, defeat the competition.');
         SEOTools::opengraph()->setUrl('https://ecomm.vicsystems.com.ng');
         SEOTools::setCanonical('https://ecomm.vicsystems.com.ng');
         SEOTools::opengraph()->addProperty('type', 'articles');

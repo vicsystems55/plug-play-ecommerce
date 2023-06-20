@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Artesaos\SEOTools\Facades\SEOTools;
+
 class PageController extends Controller
 {
     //
@@ -34,8 +36,30 @@ class PageController extends Controller
 
 
 
+        }else{
+
+            $packageName = 'Basic Package';
+            $price = 5000;
+            $message = "As you start your journey with us, the basic package offers essential features at an affordable price. However, our premium packages provide advanced support and exclusive content that you won't want to miss out on. Upgrade now for more benefits!";
+
         }
 
         return view('register', compact('packageName', 'price', 'message'));
+    }
+
+
+
+    public function index() {
+
+        SEOTools::setTitle('Plug & Play Ecommerce');
+        SEOTools::setDescription('Plug & Play Ecommerce is aimed at relieving you our clients from the hassle of taking your business sales process online.');
+        SEOTools::opengraph()->setUrl('https://ecomm.vicsystems.com.ng');
+        SEOTools::setCanonical('https://ecomm.vicsystems.com.ng');
+        SEOTools::opengraph()->addProperty('type', 'articles');
+        SEOTools::twitter()->setSite('@LuizVinicius73');
+        SEOTools::jsonLd()->addImage(config('app.url').'assets/images/resource/testimonial.jpg');
+
+
+        return view('welcome');
     }
 }

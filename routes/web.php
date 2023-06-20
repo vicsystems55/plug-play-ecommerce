@@ -15,9 +15,8 @@ use App\Http\Controllers\PaymentController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PageController::class, 'index']);
+
 
 Route::get('/contact', function () {
     return view('contact');
@@ -31,6 +30,8 @@ Route::get('/get-started', [PageController::class, 'getStarted']);
 
 // Laravel 8 & 9
 Route::post('/pay', [PaymentController::class, 'redirectToGateway'])->name('pay');
+
+
 
 Route::post('/initiate-pay', [PaymentController::class, 'initiatePay'])->name('initPay');
 

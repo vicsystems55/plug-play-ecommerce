@@ -4,9 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Artesaos\SEOTools\Facades\SEOMeta;
-use Artesaos\SEOTools\Facades\OpenGraph;
-use Artesaos\SEOTools\Facades\TwitterCard;
 use Artesaos\SEOTools\Facades\JsonLd;
 // OR with multi
 use Artesaos\SEOTools\Facades\JsonLdMulti;
@@ -65,7 +62,7 @@ class PageController extends Controller
         SEOTools::opengraph()->setUrl('https://ecomm.vicsystems.com.ng');
         SEOTools::setCanonical('https://ecomm.vicsystems.com.ng');
         SEOTools::opengraph()->addProperty('type', 'articles');
-        SEOTools::twitter()->setSite('@LuizVinicius73');
+        // SEOTools::twitter()->setSite('@LuizVinicius73');
         SEOTools::jsonLd()->addImage(config('app.url').'assets/images/resource/testimonial.jpg');
 
 

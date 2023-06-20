@@ -2,21 +2,13 @@
 <html>
 <head>
 
-    {!! SEOMeta::generate() !!}
-{!! OpenGraph::generate() !!}
-{!! Twitter::generate() !!}
-{!! JsonLd::generate() !!}
-// OR with multi
-{!! JsonLdMulti::generate() !!}
+    {!! JsonLd::generate() !!}
 
+    {!! JsonLdMulti::generate() !!}
 <!-- OR -->
 {!! SEO::generate() !!}
 
-<!-- MINIFIED -->
-{!! SEO::generate(true) !!}
 
-<!-- LUMEN -->
-{!! app('seotools')->generate() !!}
 
 <!-- Stylesheets -->
 <link href="assets/css/bootstrap.css" rel="stylesheet">

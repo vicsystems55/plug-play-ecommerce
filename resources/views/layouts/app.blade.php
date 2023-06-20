@@ -8,6 +8,9 @@
 <!-- OR -->
 {!! SEO::generate() !!}
 
+<meta property="og:image:url" content="{{config('app.url').'assets/images/resource/testimonial.jpg'}}">
+<meta property="og:image:size" content="300">
+
 
 
 <!-- Stylesheets -->
